@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<h1>Anos em que tivmos copas do mundo!</h1>
+	<script>
+		function pulaLinha(){
+			document.write("<br>");
+		}
+		function mostra(frase){
+			document.write(frase);
+		}
+		
+	    var copa1 = 1930;
+	    var anoDesejado = parseInt(prompt('Até qual ano você deseja saber se houve copa do mundo?'))
+	    
+
+    while(copa1 <= anoDesejado){
+    	if (copa1 < 1939||copa1 > 1949){
+    	  pulaLinha();
+    	  mostra ("Em "+copa1+" teve copa");
+        }
+         copa1 = copa1 + 4;
+    }
+     
+    pulaLinha();
+    mostra('Obs: nos anos entre 1938 e 1950 não houveram copas do mundo em decorrência da 2° Guerra Mundial.');
+    pulaLinha();  
+	mostra("FIM");
+
+	</script>

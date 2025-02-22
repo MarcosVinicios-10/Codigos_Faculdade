@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+	
+function mostra(frase){
+	document.write(frase)
+}
+
+var convidadostotais = 53
+var vips = 8
+var normais = 45
+
+var percentualVip = Math.round(vips/convidadostotais * 100)
+var percentualNormais = Math.round(normais/convidadostotais*100)
+
+mostra('Temos ' + convidadostotais + ' convidados, dos quais ' +percentualVip + '% são Vip e ' + percentualNormais + '% são normais.')
+mostra('<br>')
+mostra('Essa festa é popular')
+
+</script>

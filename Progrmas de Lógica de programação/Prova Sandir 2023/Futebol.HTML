@@ -1,0 +1,20 @@
+<meta charset='UTF-8'>
+<script>
+	
+function mostra (frase) {
+	document.write(frase)
+}
+
+function pulaLinha() {
+	document.write('<br>')
+}
+
+var win = 25
+var empate = 5
+var pontos = win * 3 + empate
+var percentual = (pontos/114 * 100)
+
+mostra('Seu time fez um total de ' + pontos + ' pontos. Com um percentual de ' + percentual + '% em relação a pontuação máx. possível.')
+pulaLinha()
+mostra('Parabéns seu time melhorou!')
+</script>

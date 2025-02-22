@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h3>Álcool ou Gosolina?</h3>
+
+<script>
+	
+function mostra(frase) {
+  document.write(frase)
+}
+
+function PulaLinha() {
+	document.write('<br>')
+}
+
+var tanqueChevette = 42
+var distânciaChevette = 280
+var consumoChevette = Math.round(distânciaChevette/tanqueChevette)
+
+var tanqueFusca = 38
+var distâciaFusca = 190
+var consumoFusca = Math.round(distâciaFusca/tanqueFusca)
+
+var gastoChevette = 1500/consumoChevette * 6
+var gastoFusca = 1500/consumoFusca * 4.39
+
+
+mostra('O consumo deste Fusca rodando 190Km é de ' + consumoFusca + 'Km/l. Se fossemos rodar 1500Km gastariamos cerca de R$' + gastoFusca + '.')
+PulaLinha()
+mostra('O consumo deste Chevette rodando 280Km é de ' + consumoChevette + 'Km/l Se fossemos rodar 1500Km gastariamos cerca de R$' + gastoChevette + '.')
+
+</script>

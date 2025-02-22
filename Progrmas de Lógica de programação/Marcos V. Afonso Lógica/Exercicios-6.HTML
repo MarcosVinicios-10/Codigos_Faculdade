@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write('<br>');
+	}
+
+	function mostra(frase) {
+		document.write(frase); // Imprime o que está dentro da váriavel 'frase'
+	}	
+
+	function soma(numero1, numero2) {
+		var soma1 = (numero1 + numero2)
+		mostra('A soma dos números é ' + soma1);
+	}
+
+	function divisão(numero1, numero2) {
+		var divisão1 = numero1 / numero2
+		mostra('A divisão dos números é ' + divisão1);
+	}
+
+	var numero1 = parseInt(prompt('Qual o primeiro número?'))
+	var numero2 = parseInt(prompt('Qual o segundo número?'))
+	soma(numero1, numero2)
+	pulaLinha()
+	divisão(numero1, numero2)
+	pulaLinha()
+	document.write('A soma final é: ' + (numero1 + numero2 + numero1 / numero2));
+
+</script>

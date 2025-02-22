@@ -1,0 +1,23 @@
+<meta charset="UTF-8"> 
+
+<script>
+	function pulaLinha() {
+		document.write('<br>');
+	}
+	
+	function mostra(frase) {
+		document.write(frase);
+	}	
+    
+    var chegadaPortugueses = 1500;
+    var médiaDeGerações = 28;
+    var anoAtual = 2024;
+    var anosQuePassaram = anoAtual - chegadaPortugueses;
+    var quantidadeDeGerações = Math.round(anosQuePassaram / médiaDeGerações);
+
+    mostra('Se passaram ' + anosQuePassaram + ' anos desde a chegada dos Portugueses ao que hoje conhecemos como Brasil.');
+
+    pulaLinha();
+
+    mostra(('Se levarmos em conta que em média casais tem filhos com ') + médiaDeGerações + (' anos de idade, logo se passaram cerca de ') + quantidadeDeGerações + (' gerações desde a chegado dos Portugueses em ') + chegadaPortugueses +('.'));
+</script>
