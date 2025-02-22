@@ -1,4 +1,5 @@
-'''Exercícios: Manipulando Listas em Python
+'''
+Exercícios: Manipulando Listas em Python
 Criando uma lista de números
 Crie uma lista chamada numeros com os números de 1 a 10. Exiba a lista no console.
 '''
