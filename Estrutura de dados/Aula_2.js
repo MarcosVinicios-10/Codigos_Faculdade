@@ -71,6 +71,6 @@ console.log(veículos_M);
 
 var pessoas = [ {nome: "João", idade: 25}, {nome: "Maria", idade: 30}, {nome: "Pedro", idade: 20}];
 var pessoasMaiores = pessoas.filter(function(pessoa) {
-return pessoa.idade > 25;
+    return pessoa.idade > 25;
 });
 console.log(pessoasMaiores);
