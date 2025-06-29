@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de ordenação com Barras</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid white;
+            width: 80%;
+        }
+
+        .bar {
+            width: 30px;
+            margin: 0 5px;
+            background-color: #4CAF50;
+            transition: all 0.3s ease;
+        }
+
+        #sortBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #sortBtn:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bubble Sort Visual - Jogo Gráfico</h1>
+    <div id="container"></div>
+    <button id="sortBtn">Ordenar com Bubble Sort</button>
+
+    <script>
+        const values = Array.from({ length: 30 }, () => Math.floor(Math.random() * 250) + 50);
+        const container = document.getElementById("container");
+
+        function renderBars(array) {
+            container.innerHTML = "";
+            array.forEach(height => {
+                const bar = document.createElement("div");
+                bar.classList.add("bar");
+                bar.style.height = `${height}px`;
+                container.appendChild(bar);
+            });
+        };
+
+        renderBars(values);
+
+        async function bubbleSortVisual(array) {
+            const bars = container.children;
+
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array.length - 1 - i; j++) {
+                    bars[j].style.backgroundColor = "red";
+                    bars[j + 1].style.backgroundColor = "red";
+
+                    await new Promise(resolve => setTimeout(resolve, 300));
+
+                    if (array[j] > array[j + 1]) {
+                        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                        bars[j].style.height = `${array[j]}px`;
+                        bars[j + 1].style.height = `${array[j + 1]}px`;
+                    };
+
+                    bars[j].style.backgroundColor = "#4CAF50";
+                    bars[j + 1].style.backgroundColor = "#4CAF50";
+                };
+            };
+
+
+            for (let bar of bars) {
+                bar.style.backgroundColor = "blue";
+            };
+        };
+
+        document.getElementById("sortBtn").addEventListener("click", () => bubbleSortVisual(values));
+    </script>
+</body>
+
+</html>

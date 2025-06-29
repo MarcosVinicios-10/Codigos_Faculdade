@@ -1,0 +1,2 @@
+const historicoCompras = [{produtos: 'mouse', quantidade: 1, valorUnitario: 100},{produtos: 'chocolate', quantidade: 1, valorUnitario: 10},{produtos: 'miojo', quantidade: 1, valorUnitario: 5}]
+console.log(historicoCompras)
